@@ -80,7 +80,7 @@ fn main() -> io::Result<()> {
         })
         .for_each(|r: Result<WorkReport, io::Error>| match r {
             Ok(report) => {
-                println!("{}", report);
+                // println!("{}", report);
             }
             Err(e) => {
                 println!("{:?}", e);
