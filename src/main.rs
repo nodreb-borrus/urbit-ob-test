@@ -32,11 +32,11 @@ impl fmt::Display for WorkReport {
 }
 
 fn main() -> io::Result<()> {
-    (0..0xff)
+    (0..0xfff)
         .into_par_iter()
         .map(|n| {
-            let start = n << 24 | 0;
-            let end = n << 24 | 0xffffff;
+            let start = n << 20 | 0;
+            let end = n << 20 | 0xfffff;
             let mut node_cmd = Command::new("node")
                 .arg("index.js")
                 .arg("patp")
@@ -80,7 +80,7 @@ fn main() -> io::Result<()> {
                 println!("{}", report);
             }
             Err(e) => {
-                println!("{:?}", e)
+                println!("{:?}", e);
             }
         });
     Ok(())
