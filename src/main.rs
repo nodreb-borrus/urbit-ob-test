@@ -69,6 +69,9 @@ fn main() -> io::Result<()> {
                     println!("MISMATCH: {}", line);
                 }
             }
+
+            node_cmd.wait()?;
+
             Ok(WorkReport {
                 start,
                 end,
