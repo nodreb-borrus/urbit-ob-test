@@ -39,7 +39,7 @@ fn main() -> io::Result<()> {
             let end = n << 20 | 0xfffff;
             let mut node_cmd = Command::new("node")
                 .arg("index.js")
-                .arg("patp")
+                .arg("patq")
                 .arg(format!("{}", start))
                 .arg(format!("{}", end))
                 .stdout(Stdio::piped())
@@ -61,8 +61,8 @@ fn main() -> io::Result<()> {
                         io::ErrorKind::Other,
                         "Badly formatted input line",
                     ))?;
-                let valid = validate_patp(point_num, expected_patp)
-                    .map_err(|_| io::Error::new(io::ErrorKind::Other, "patp calculation error"))?;
+                let valid = validate_patq(point_num, expected_patp)
+                    .map_err(|_| io::Error::new(io::ErrorKind::Other, "patq calculation error"))?;
                 if valid {
                     good_rows += 1;
                 } else {
