@@ -1,0 +1,25 @@
+{
+  "name": "urbit-ob-test",
+  "version": "1.0.0",
+  "description": "Tests that Rust urbit-ob behavior matches JavaScript urbit-ob",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodreb-borrus/urbit-ob-test.git"
+  },
+  "keywords": [
+    "urbit"
+  ],
+  "author": "~nodreb-borrus <nodreb@borr.us>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nodreb-borrus/urbit-ob-test/issues"
+  },
+  "homepage": "https://github.com/nodreb-borrus/urbit-ob-test#readme",
+  "dependencies": {
+    "urbit-ob": "^5.0.1"
+  }
+}
